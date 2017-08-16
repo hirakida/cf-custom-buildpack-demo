@@ -1,0 +1,6 @@
+---
+applications:
+  - name: cf-custom-buildpack-demo
+    memory: 64m
+    instances: 1
+    buildpack: https://github.com/hirakida/cf-custom-buildpack-demo.git
