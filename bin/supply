@@ -1,10 +1,17 @@
 #!/usr/bin/env bash
 # bin/supply <build-dir> <cache-dir> <deps-dir> <index>
 
+BIN_DIR=$(dirname $0)
+BUILD_DIR=$1
+
 echo '##### supply #####'
-echo $1
+echo $BIN_DIR
+echo $BUILD_DIR
 echo $2
 echo $3
 echo $4
+
+mkdir -p $BUILD_DIR/.profile.d
+cp $BIN_DIR/profile.sh ${BUILD_DIR}/.profile.d
 
 exit 0
