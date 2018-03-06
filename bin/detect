@@ -1,6 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# bin/detect <build-dir>
 
 echo '##### detect #####'
+echo $1
 
 if [ -f "$1/hello.txt" ]; then
   exit 0

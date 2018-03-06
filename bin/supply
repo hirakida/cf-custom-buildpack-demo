@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/supply <build-dir> <cache-dir> <deps-dir> <index>
+
+echo '##### supply #####'
+echo $1
+echo $2
+echo $3
+echo $4
+
+exit 0
