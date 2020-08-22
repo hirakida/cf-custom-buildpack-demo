@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 # bin/supply <build-dir> <cache-dir> <deps-dir> <index>
 
-BIN_DIR=$(cd $(dirname $0); pwd)
 BUILD_DIR=$1
 CACHE_DIR=$2
+DEPS_DIR=$3
+INDEX=$4
 
-echo '##### supply #####'
-echo $BIN_DIR
-echo $BUILD_DIR
-echo $CACHE_DIR
-echo $3
-echo $4
+export BUILDPACK_DIR=$(dirname $(readlink -f ${BASH_SOURCE%/*}))
+source "$BUILDPACK_DIR"/scripts/supply.sh
 
-mkdir -p $BUILD_DIR/.profile.d
-cp $BIN_DIR/profile.sh $BUILD_DIR/.profile.d
-
-exit 0
+echo "##### supply #####"
+echo "$BUILD_DIR"
+echo "$CACHE_DIR"
+echo "$DEPS_DIR"
+echo "$INDEX"

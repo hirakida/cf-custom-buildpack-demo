@@ -3,5 +3,5 @@
 
 cat << EOF
 default_process_types:
-  web: bash -c 'while true; do echo -e "HTTP/1.1 200 OK\n\n$(<$1/hello.txt)" | nc -l -p \$PORT; done'
+  web: 'while true; do echo -e "HTTP/1.1 200 OK\nContent-Length: 6\n\nHello!" | nc -l -p \$PORT; done'
 EOF

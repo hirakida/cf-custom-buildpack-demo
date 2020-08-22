@@ -3,4 +3,5 @@ applications:
   - name: cf-hello-buildpack
     memory: 64m
     instances: 1
-    buildpack: https://github.com/hirakida/cf-hello-buildpack.git
+    buildpacks:
+      - https://github.com/hirakida/cf-hello-buildpack.git
