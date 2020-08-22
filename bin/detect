@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 # bin/detect <build-dir>
 
-BUILD_DIR=$1
-
 echo "##### detect #####"
 echo "$BUILD_DIR"

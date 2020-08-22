@@ -7,7 +7,7 @@ DEPS_DIR=$3
 INDEX=$4
 
 export BUILDPACK_DIR=$(dirname $(readlink -f ${BASH_SOURCE%/*}))
-source "$BUILDPACK_DIR"/scripts/supply.sh
+source "$BUILDPACK_DIR/scripts/supply.sh"
 
 echo "##### supply #####"
 echo "$BUILD_DIR"
