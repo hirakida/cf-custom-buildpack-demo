@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 # bin/release <build-dir>
 
+#BUILD_DIR=$1
+
 cat << EOF
 default_process_types:
-  web: 'while true; do echo -e "HTTP/1.1 200 OK\nContent-Length: 6\n\nHello!" | nc -l -p \$PORT; done'
+  web: './server.sh \$PORT'
 EOF
